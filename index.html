@@ -75,13 +75,11 @@
 					<nav class="header-nav">
 						<div class="social">
 							
-								<a class="github" target="_blank" href="#" title="github">github</a>
+								<a class="github" target="_blank" href="https://github.com/xiaojunnanya" title="github">github</a>
 					        
-								<a class="mail" target="_blank" href="#" title="mail">mail</a>
+								<a class="mail" target="_blank" href="/xjntofly@sina.com" title="mail">mail</a>
 					        
-								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-					        
-								<a class="google" target="_blank" href="#" title="google">google</a>
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/nai-you-shu-sheng-74" title="zhihu">zhihu</a>
 					        
 						</div>
 						<!-- music -->
@@ -152,13 +150,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github">github</a>
+						<a class="github" target="_blank" href="https://github.com/xiaojunnanya" title="github">github</a>
 			        
-						<a class="mail" target="_blank" href="#" title="mail">mail</a>
+						<a class="mail" target="_blank" href="/xjntofly@sina.com" title="mail">mail</a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-			        
-						<a class="google" target="_blank" href="#" title="google">google</a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/nai-you-shu-sheng-74" title="zhihu">zhihu</a>
 			        
 				</div>
 			</nav>
@@ -253,8 +249,43 @@
 <li>即可在github上更新，因为网速的问题，过一会即可在你自己的网址上查看到更新</li>
 </ul>
 </blockquote>
-<h2 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h2><blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo init [命名] <span class="comment">#初始化本地hexo文件</span></span><br><span class="line">hexo s <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo s -p 5000 <span class="comment">#设置打开的端口号</span></span><br><span class="line">hexo clean <span class="comment">#清除缓存  网页正常情况下可以忽略此条命令</span></span><br><span class="line">hexo g <span class="comment">#生成静态页面至public目录,将你的博客打包</span></span><br><span class="line">hexo d <span class="comment">#部署到GitHub</span></span><br></pre></td></tr></table></figure></blockquote>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>  hexo常用命令</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo init [命名] <span class="comment">#初始化本地hexo文件</span></span><br><span class="line">hexo s <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo s -p 5000 <span class="comment">#设置打开的端口号</span></span><br><span class="line">hexo clean <span class="comment">#清除缓存  网页正常情况下可以忽略此条命令</span></span><br><span class="line">hexo g <span class="comment">#生成静态页面至public目录,将你的博客打包</span></span><br><span class="line">hexo d <span class="comment">#部署到GitHub</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>  绑定自己的域名</p>
+<blockquote>
+<ul>
+<li>先实名认证，然后买域名(推荐<a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/domain/">阿里云</a>)，等待域名认证，</li>
+<li>认证成功后，解析域名，按照以下的例子进行配置<table>
+<thead>
+<tr>
+<th align="center">主机记录</th>
+<th align="center">记录类型</th>
+<th align="center">解析线路(isp)</th>
+<th align="center">记录值</th>
+<th align="center">TTL</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">@</td>
+<td align="center">CNAME</td>
+<td align="center">默认</td>
+<td align="center">github用户名.github.io</td>
+<td align="center">10分钟</td>
+</tr>
+<tr>
+<td align="center">www</td>
+<td align="center">CNAME</td>
+<td align="center">默认</td>
+<td align="center">github用户名.github.io</td>
+<td align="center">10分钟</td>
+</tr>
+</tbody></table>
+</li>
+<li>之后我们前往github仓库中，在你的仓库中创建一个名字为CNAME的文件，里面写入购买的域名，点击仓库的setting，往下翻，找到GitHub Pages,点击Check it out here , github会进行自动验证，验证完即可使用自己的域名看到自己的博客啦</li>
+</ul>
+</blockquote>
 
       
     </div>

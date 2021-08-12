@@ -539,10 +539,10 @@ a {
   opacity: 1;
 }
 #header .profilepic:hover {
-  -webkit-transform: rotate(0.7turn);
-  -moz-transform: rotate(0.7turn);
-  -ms-transform: rotate(0.7turn);
-  transform: rotate(0.7turn);
+  -webkit-transform: rotate(1turn);
+  -moz-transform: rotate(1turn);
+  -ms-transform: rotate(1turn);
+  transform: rotate(1turn);
 }
 #header .header-subtitle {
   text-align: center;

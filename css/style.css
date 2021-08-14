@@ -140,14 +140,14 @@ body {
   font-family: "微软雅黑", Verdana, Arial, Helvetica, sans-serif;
   font-size: 18px;
   letter-spacing: 2px;
-  background: url("/img/bg.jpg");
+  background: url("/img/");
   background-repeat: no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   background-color: #c8e6de;
-  color: #fff;
+  color: #000;
   -webkit-overflow-scrolling: touch;
   background-attachment: fixed;
 }

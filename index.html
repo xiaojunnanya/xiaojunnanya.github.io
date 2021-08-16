@@ -214,7 +214,7 @@
 <li>在安装完git之后，在桌面鼠标右击打开Git Bash Here</li>
 <li>输入命令,完成与github的信息绑定(输入后回车进行下一行命令)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你的gitee用户名&quot;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&quot;你的gitee注册邮箱&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>输入命令,生成ssh密钥文件(直接三个回车即可，默认不需要设置密码)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;你的GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>输入<code>ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</code>,生成ssh密钥文件(直接三个回车即可，默认不需要设置密码)</li>
 <li>找到刚刚生成的.ssh的文件夹，点击进入文件夹，用记事本打开id_rsa.pub文件，即为密钥，将内容全部复制</li>
 <li>你可以将你的gitee的账号与github的账号进行绑定，这样SSH公钥在gitee与github中可以一起使用</li>
 </ul>
@@ -302,7 +302,7 @@
 <li>在安装完git之后，在桌面鼠标右击打开Git Bash Here</li>
 <li>输入命令,完成与github的信息绑定(输入后回车进行下一行命令)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你的GitHub用户名&quot;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&quot;你的GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>输入命令,生成ssh密钥文件(直接三个回车即可，默认不需要设置密码)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;你的GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>输入<code>ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</code>,生成ssh密钥文件(直接三个回车即可，默认不需要设置密码)</li>
 <li>找到刚刚生成的.ssh的文件夹，点击进入文件夹，用记事本打开id_rsa.pub文件，即为密钥，将内容全部复制</li>
 </ul>
 </blockquote>

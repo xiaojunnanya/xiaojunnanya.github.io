@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>鲸落 - Ubuntu配置的服务器部署vue项目 | 鲸落</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="欢迎来到我的博客。对于一名大学生来说，拥有自己的服务器不论是在考研复试中还是找工作面试中，都是一个加分项，当你购买一个服务器的时候，还需要做一些配置才可以使用他，下面我将带来Ubuntu配置的服务器部署vue项目的操作步骤。 1. 准备工作  购买服务器，这里推荐阿里云服务器 准备vue项目,提前将vue文件运行npm run build,之后将使用dist文件 进入Xshell与Xftp官网,选">
+<meta property="og:type" content="article">
+<meta property="og:title" content="鲸落 - Ubuntu配置的服务器部署vue项目">
+<meta property="og:url" content="https://xiaojunnanya.github.io/2021/11/11/Ubuntu%E9%85%8D%E7%BD%AE%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2vue%E9%A1%B9%E7%9B%AE/index.html">
+<meta property="og:site_name" content="鲸落">
+<meta property="og:description" content="欢迎来到我的博客。对于一名大学生来说，拥有自己的服务器不论是在考研复试中还是找工作面试中，都是一个加分项，当你购买一个服务器的时候，还需要做一些配置才可以使用他，下面我将带来Ubuntu配置的服务器部署vue项目的操作步骤。 1. 准备工作  购买服务器，这里推荐阿里云服务器 准备vue项目,提前将vue文件运行npm run build,之后将使用dist文件 进入Xshell与Xftp官网,选">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-11-11T10:31:55.219Z">
+<meta property="article:modified_time" content="2021-11-11T12:22:28.439Z">
+<meta property="article:author" content="鲸落">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("lsVo8h9BPglamkwM25BQkWL8-gzGzoHsz", "PI9lj3yw551EeAAtjkAFSRup");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/1.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">鲸落</a></h1>
+		</hgroup>
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">首页</a></li>
+				        
+							<li><a href="/archives">档案</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>标签</a>
+						<a>友情链接</a>
+						<a>关于我</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/xiaojunnanya" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/nai-you-shu-sheng-74" title="zhihu">zhihu</a>
+					        
+								<a class="facebook" target="_blank" href="https://gitee.com/xiaojunnanya" title="facebook">facebook</a>
+					        
+						</div>
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=https://music.163.com/song?id=1313070401&userid=1704725983&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/xiaojunnanya">github</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://www.zhihu.com/people/nai-you-shu-sheng-74">zhihu</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://gitee.com/xiaojunnanya">gitee</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">一个菜鸟程序员，希望你会喜欢我的博客以及他的内容 ！</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/1.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">首页</a></li>
+		        
+					<li><a href="/archives">档案</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/xiaojunnanya" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/nai-you-shu-sheng-74" title="zhihu">zhihu</a>
+			        
+						<a class="facebook" target="_blank" href="https://gitee.com/xiaojunnanya" title="facebook">facebook</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Ubuntu配置的服务器部署vue项目" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2021/11/11/Ubuntu%E9%85%8D%E7%BD%AE%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2vue%E9%A1%B9%E7%9B%AE/" class="article-date">
+  	<time datetime="2021-11-11T10:31:55.219Z" itemprop="datePublished">2021-11-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      鲸落 - Ubuntu配置的服务器部署vue项目
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Ubuntu/">Ubuntu</a><a class="article-category-link" href="/categories/vue/">vue</a><a class="article-category-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
+	</div>
+
+
+        
+          <!-- 
+<div class="counter-tag counter">
+    <span id="/2021/11/11/Ubuntu%E9%85%8D%E7%BD%AE%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2vue%E9%A1%B9%E7%9B%AE/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="鲸落 - Ubuntu配置的服务器部署vue项目">
+         &nbsp;
+        view
+    </span>
+</div>
+ -->
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>欢迎来到我的博客。对于一名大学生来说，拥有自己的服务器不论是在考研复试中还是找工作面试中，都是一个加分项，当你购买一个服务器的时候，还需要做一些配置才可以使用他，下面我将带来Ubuntu配置的服务器部署vue项目的操作步骤。</p>
+<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h2><blockquote>
+<ul>
+<li>购买服务器，这里推荐<a target="_blank" rel="noopener" href="https://www.aliyun.com/?spm=5176.25353603.J_8058803260.15.a602406075Gl9T">阿里云服务器</a></li>
+<li>准备vue项目,提前将vue文件运行<code>npm run build</code>,之后将使用dist文件</li>
+<li>进入<a target="_blank" rel="noopener" href="https://www.netsarang.com/zh/xshell/">Xshell与Xftp</a>官网,选择个人免费版本下载即可</li>
+</ul>
+</blockquote>
+<h2 id="2-服务器部分"><a href="#2-服务器部分" class="headerlink" title="2. 服务器部分"></a>2. 服务器部分</h2><blockquote>
+<ul>
+<li>购买完服务器之后，进入控制台，直接搜索云服务器ECS，即可查看你的服务器，点击进入，公网IP即为你服务器的访问地址，主私网IP为局域网访问地址。</li>
+<li>在右上方选择重置密码，重置密码之后要记住密码，不要忘记了。</li>
+<li>点击安全组，配置规则，选择手动添加，添加一个端口为80端口，其他的默认保存即可。</li>
+</ul>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="3-Xshell部分"><a href="#3-Xshell部分" class="headerlink" title="3. Xshell部分"></a>3. Xshell部分</h2><blockquote>
+<ul>
+<li>先打开Xshell,点击新建，名称选择你自己想起的名字，主机为之前查看到公网IP，其他的不管，点击链接。</li>
+<li>然后开始配置环境。</li>
+<li>先安装nginx：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install nginx</span><br></pre></td></tr></table></figure></li>
+</ul>
+</blockquote>
+<h2 id="4-Xftp部分"><a href="#4-Xftp部分" class="headerlink" title="4. Xftp部分"></a>4. Xftp部分</h2><blockquote>
+<ul>
+<li>打开Xftp,在根目录下找到home文件夹，进入，新建一个文件夹，在该文件夹下放入dist文件。</li>
+<li>之后进入<code>/etc/nginx/sites-enabled/default</code>目录下，打开default文件</li>
+<li>修改前：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#server &#123;</span></span><br><span class="line"><span class="comment">#       listen 80;</span></span><br><span class="line"><span class="comment">#       listen [::]:80;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#       server_name example.com;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#       root /var/www/example.com;</span></span><br><span class="line"><span class="comment">#       index index.html;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#       location / &#123;</span></span><br><span class="line"><span class="comment">#               try_files $uri $uri/ =404;</span></span><br><span class="line"><span class="comment">#       &#125;</span></span><br><span class="line"><span class="comment">#&#125;</span></span><br></pre></td></tr></table></figure></li>
+<li>修改为：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    listen [::]:80;</span><br><span class="line"></span><br><span class="line">    server_name 127.0.0.1:80;  <span class="comment"># 服务器域名或IP+端口</span></span><br><span class="line"></span><br><span class="line">    root /data/blog/backend/dist;  <span class="comment"># 打包后的dist目录</span></span><br><span class="line">    index index.html;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">            try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ @router; <span class="comment"># 指向下面的 @router否则会出现 404</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 对应上面的 @router,主要Vue请求并不是真实路径，无法找到文件，需要重定向到 index.html 中，然后交给路由处理</span></span><br><span class="line">    location @router &#123;</span><br><span class="line">            rewrite ^.*$ /index.html last;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>之后<code>nginx -s reload</code>即可。</li>
+</ul>
+</blockquote>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><pre><code>Ubuntu下操作Nginx常用命令
+</code></pre>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install nginx  <span class="comment">#安装</span></span><br><span class="line">sudo /etc/init.d/nginx start <span class="comment">#启动</span></span><br><span class="line">nginx -s reload <span class="comment">#重新加载配置项</span></span><br><span class="line">sudo /etc/init.d/nginx quit <span class="comment">#关闭</span></span><br><span class="line">nginx -s stop <span class="comment">#停止</span></span><br></pre></td></tr></table></figure></blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/09/09/Gitee%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">鲸落 - Gitee的使用</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <!--
+ * @Author: 肖俊男
+ * @Date: 2021-09-09 21:57:51
+ * @LastEditTime: 2021-10-27 20:11:26
+ * @LastEditors: 肖俊男
+ * @Description: 
+ * @FilePath: \hexo\blog\themes\jelly\layout\_partial\footer.ejs
+ * 鲸落
+-->
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2021 鲸落
+      </div>
+        <div class="footer-right">
+          致谢 ：君の名は.
+          <!-- <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a> -->
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

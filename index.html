@@ -214,7 +214,25 @@
 <ul>
 <li>购买完服务器之后，进入控制台，直接搜索云服务器ECS，即可查看你的服务器，点击进入，公网IP即为你服务器的访问地址，主私网IP为局域网访问地址。</li>
 <li>在右上方选择重置密码，重置密码之后要记住密码，不要忘记了。</li>
-<li>点击安全组，配置规则，选择手动添加，添加一个端口为80端口，其他的默认保存即可。</li>
+<li>点击安全组，配置规则，选择手动添加，添加一个端口为80端口，其他的默认保存即可。<table>
+<thead>
+<tr>
+<th align="center">优先级</th>
+<th align="center">协议类型</th>
+<th align="center">宽口范围</th>
+<th align="center">授权对象</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">允许</td>
+<td align="center">1</td>
+<td align="center">自定义 TCP</td>
+<td align="center">目的80</td>
+<td align="center">源0.0.0.0/0</td>
+</tr>
+</tbody></table>
+</li>
 </ul>
 </blockquote>
       

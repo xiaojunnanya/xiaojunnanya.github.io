@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>鲸落 - Java的学习 | 鲸落</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="欢迎来到我的博客。本部分主要是记录我学习Java笔记以及在学习过程中遇到的一些问题。 1.JDK与JRE的安装  安装8版本的JDK,下载好安装包之后一路傻瓜式安装即可（记得更改安装路径），在安装JDK的同时也会提醒安装JRE，按提示安装即可   2.搭建环境变量  在用户变量中，点击创建，变量名命名为JAVA_HOME（必须为这个名字），变量值则为你安装java的路径，eg：’D:\set ap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="鲸落 - Java的学习">
+<meta property="og:url" content="https://xiaojunnanya.github.io/2021/12/26/Java%E7%9A%84%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="鲸落">
+<meta property="og:description" content="欢迎来到我的博客。本部分主要是记录我学习Java笔记以及在学习过程中遇到的一些问题。 1.JDK与JRE的安装  安装8版本的JDK,下载好安装包之后一路傻瓜式安装即可（记得更改安装路径），在安装JDK的同时也会提醒安装JRE，按提示安装即可   2.搭建环境变量  在用户变量中，点击创建，变量名命名为JAVA_HOME（必须为这个名字），变量值则为你安装java的路径，eg：’D:\set ap">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-25T16:30:02.581Z">
+<meta property="article:modified_time" content="2021-12-31T08:40:26.700Z">
+<meta property="article:author" content="鲸落">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("lsVo8h9BPglamkwM25BQkWL8-gzGzoHsz", "PI9lj3yw551EeAAtjkAFSRup");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/1.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">鲸落</a></h1>
+		</hgroup>
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">首页</a></li>
+				        
+							<li><a href="/archives">档案</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>标签</a>
+						<a>友情链接</a>
+						<a>关于我</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/xiaojunnanya" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/nai-you-shu-sheng-74" title="zhihu">zhihu</a>
+					        
+								<a class="facebook" target="_blank" href="https://gitee.com/xiaojunnanya" title="facebook">facebook</a>
+					        
+						</div>
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=https://music.163.com/song?id=1313070401&userid=1704725983&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/xiaojunnanya">github</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://www.zhihu.com/people/nai-you-shu-sheng-74">zhihu</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://gitee.com/xiaojunnanya">gitee</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">一个菜鸟程序员，希望你会喜欢我的博客以及他的内容 ！</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/1.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">首页</a></li>
+		        
+					<li><a href="/archives">档案</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/xiaojunnanya" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/nai-you-shu-sheng-74" title="zhihu">zhihu</a>
+			        
+						<a class="facebook" target="_blank" href="https://gitee.com/xiaojunnanya" title="facebook">facebook</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Java的学习" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2021/12/26/Java%E7%9A%84%E5%AD%A6%E4%B9%A0/" class="article-date">
+  	<time datetime="2021-12-25T16:30:02.581Z" itemprop="datePublished">2021-12-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      鲸落 - Java的学习
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Java/">Java</a>
+	</div>
+
+
+        
+          <!-- 
+<div class="counter-tag counter">
+    <span id="/2021/12/26/Java%E7%9A%84%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="鲸落 - Java的学习">
+         &nbsp;
+        view
+    </span>
+</div>
+ -->
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>欢迎来到我的博客。本部分主要是记录我学习Java笔记以及在学习过程中遇到的一些问题。</p>
+<h2 id="1-JDK与JRE的安装"><a href="#1-JDK与JRE的安装" class="headerlink" title="1.JDK与JRE的安装"></a>1.JDK与JRE的安装</h2><blockquote>
+<ul>
+<li>安装8版本的<a target="_blank" rel="noopener" href="https://www.cr173.com/soft/33894.html">JDK</a>,下载好安装包之后一路傻瓜式安装即可（记得更改安装路径），在安装JDK的同时也会提醒安装JRE，按提示安装即可</li>
+</ul>
+</blockquote>
+<h2 id="2-搭建环境变量"><a href="#2-搭建环境变量" class="headerlink" title="2.搭建环境变量"></a>2.搭建环境变量</h2><blockquote>
+<ul>
+<li>在用户变量中，点击创建，变量名命名为JAVA_HOME（必须为这个名字），变量值则为你安装java的路径，eg：’D:\set app\java’</li>
+<li>在用户变量中找到变量为path（如果没有就创建），然后单击之后编辑，选择新建，输入 <code>%JAVA_HOME%\bin</code> 即可，然后点击确认就配置完成了</li>
+<li><strong>自检</strong>：打开cmd，输入<code>java -version</code>检查版本号，之后输入<code>java</code>与<code>javac</code>，两者都正常运行即表示环境变量配置成功</li>
+<li><strong>注</strong>：当系统不能正确的识别当前用户，则在系统变量里进行上述的步骤即可</li>
+</ul>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="3-软件推荐"><a href="#3-软件推荐" class="headerlink" title="3.软件推荐"></a>3.软件推荐</h2><blockquote>
+<ul>
+<li>软件推荐使用<a target="_blank" rel="noopener" href="https://www.onlinedown.net/soft/32289.htm">Eclipse</a>(主要是免费),点击安装时选择安装 <em>Eclipse IDE for Java Developers</em> 即可（软件安装较慢，耐心等待）</li>
+</ul>
+</blockquote>
+<h2 id="4-基础知识学习易错点"><a href="#4-基础知识学习易错点" class="headerlink" title="4.基础知识学习易错点"></a>4.基础知识学习易错点</h2><blockquote>
+<ul>
+<li><strong>Java基本数据类型</strong>：在定义long、float、double类型的时候，在数据的尾部必须要加上L、F、D（大小写均可），因为其相对的默认值分别为0F、0.0F、0.0D。对于byte、short、int等类型直接定义即可</li>
+<li><strong>一维数组</strong><ul>
+<li>声明：声明一个int类型的一维数组: <code>int[] arr;</code>与<code>int arr[];</code>均可</li>
+<li>静态初始化（直接对元素进行赋值）：<code>arr = new int[]&#123;1,2,3,4&#125;;</code></li>
+<li>动态初始化（初始化与元素赋值分开）：<code>String names[] = new String[4];</code>(并没有直接给数组元素进行赋值)</li>
+<li>数组的复制：<ul>
+<li>错误的复制：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> arr1[],arr2[];</span><br><span class="line">arr1[] = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">arr2=arr1;<span class="comment">//这样复制，仅仅是将arr1的地址复制给arr2</span></span><br></pre></td></tr></table></figure></li>
+<li>正确的复制<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> arr1[],arr2[];</span><br><span class="line">arr1[] = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;arr1.length;i++)&#123;</span><br><span class="line">    arr2[i] = arr1[i];<span class="comment">//将数组arr1中的所有的值赋值给arr2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>二维数组</strong><ul>
+<li>声明：声明一个int类型的二维数组：<code>int[][] arr;</code>与<code>int arr[][];</code>均可</li>
+<li>静态初始化（直接对元素进行赋值）：<code>int arr[][] = new int[][]&#123;&#123;1,2,3&#125;,&#123;4,5&#125;,&#123;6,7,8&#125;&#125;;</code></li>
+<li>动态初始化（初始化与元素赋值分开）：<code>String arr[][] = new String[3][2];</code>(并没有直接给数组元素进行赋值)</li>
+<li>动态初始化的另一种方式：<code>String arr[][] = new String[3][];</code>,之后给一维数组进行动态赋值：<code>arr[1] = new String[2];</code>(代表二维数组中第二行有两个元素)</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="5-面向对象-Java学习的重点"><a href="#5-面向对象-Java学习的重点" class="headerlink" title="5.面向对象(Java学习的重点)"></a>5.面向对象(Java学习的重点)</h2><blockquote>
+<ul>
+<li>面向对象程序设计的重点是类的设计，设计类，技术设计类的成员</li>
+<li>完整的类由属性、构造器、方法构成  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PersonTest</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Person p1 = <span class="keyword">new</span> Person()<span class="comment">//其实他就是调用Person里的构造器，平时我们没有进行定义构造器，系统会默认提供一个空参的构造器</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="comment">//属性</span></span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//构造器</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.prinln(<span class="string">&quot;这是构造器&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.prinln(<span class="string">&quot;吃饭&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>构造器/构造方法/constructor</strong><ul>
+<li>eg：Person p1 = new Person(),其中Person()就称为构造器，new Person()为创建构造器</li>
+<li>作用：创建对象、初始化对象的属性</li>
+<li>如果没有显示的定义类的构造器，系统默认提供一个空参的构造器</li>
+<li>一个类中定义多个构造器，彼此构成重载</li>
+<li>一旦我们显示的定义了类的构造器之后，系统就不再提供默认的空参构造器</li>
+</ul>
+</li>
+<li><strong>类</strong>和<strong>对象</strong>是面向对象的核心概念<ul>
+<li>类是对一类事物的描述，是抽象的、概念上的定义</li>
+<li>对象是实际存在的该类事物的每个个体，因而也称为实例</li>
+</ul>
+</li>
+<li><strong>数组与对象的结合使用</strong>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">studentest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        student s[] = <span class="keyword">new</span> student[<span class="number">20</span>];  <span class="comment">//创建一个student类型的数组</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">20</span>;i++)&#123;</span><br><span class="line">            s[i]= <span class="keyword">new</span> student();    <span class="comment">//给每一个数组元素进行赋值</span></span><br><span class="line">            s[i].number=i+<span class="number">1</span>;</span><br><span class="line">            s[i].state=(<span class="keyword">int</span>)(Math.random()*(<span class="number">6</span>-<span class="number">1</span>+<span class="number">1</span>)+<span class="number">1</span>);</span><br><span class="line">            s[i].store = (<span class="keyword">int</span>)(Math.random()*<span class="number">100</span>+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;<span class="number">20</span>;i++)&#123;</span><br><span class="line">            System.out.println(s[i].state);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> number;</span><br><span class="line">    <span class="keyword">int</span> state;</span><br><span class="line">    <span class="keyword">int</span> store;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>值传递机制(不是引用传递)</strong><ul>
+<li>如果参数是基本数据类型，此时实参赋给形参的就是实参真实存储的数据值</li>
+<li>如果参数是引用数据类型，此时实参赋给形参的就是实参存储数据的地址值</li>
+</ul>
+</li>
+<li><strong>权限修饰符</strong><ul>
+<li>Java规定的四种权限修饰符(从小到大):private、缺省、protected、public</li>
+<li>权限修饰符可以用来修饰类以及类的内部结构:属性、方法、构造器、内部类</li>
+<li>对于 <em>class 名称</em> 的权限修饰只能用public和default(缺省)</li>
+<li>权限修饰符访问权限：<table>
+<thead>
+<tr>
+<th align="center">修饰符</th>
+<th align="center">类内部</th>
+<th align="center">同一个包</th>
+<th align="center">不同包的子类</th>
+<th align="center">同一个工程</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">private</td>
+<td align="center">Yes</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">(缺省)</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">protected</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">public</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><strong>权限修饰符private的使用</strong><ul>
+<li>当在数据类型前加上private时,代表仅仅只能在改方法/函数中调用<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Animal a = <span class="keyword">new</span> Animal();</span><br><span class="line">        a.name = <span class="string">&quot;鲸落&quot;</span>;</span><br><span class="line">        a.legs = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//当在int ages 前加入private后，在Test中无法调用ages,调用则会报错</span></span><br><span class="line">        a.ages = <span class="number">18</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//当我们想使用ages是，只能通过调用setLegs函数来实现</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> ages;</span><br><span class="line">    <span class="keyword">int</span> legs;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//属性的相关限制函数：</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLegs</span><span class="params">(<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>( age &gt; <span class="number">0</span> &amp;&amp; age % <span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">            ages = age;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            ages = <span class="number">0</span>;</span><br><span class="line">            <span class="comment">//或者选择抛出一个异常来告诉使用者</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/11/11/Ubuntu%E9%85%8D%E7%BD%AE%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2Vue%E9%A1%B9%E7%9B%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">鲸落 - Ubuntu配置的服务器部署Vue项目</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <!--
+ * @Author: 肖俊男
+ * @Date: 2021-09-09 21:57:51
+ * @LastEditTime: 2021-10-27 20:11:26
+ * @LastEditors: 肖俊男
+ * @Description: 
+ * @FilePath: \hexo\blog\themes\jelly\layout\_partial\footer.ejs
+ * 鲸落
+-->
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2022 鲸落
+      </div>
+        <div class="footer-right">
+          致谢 ：君の名は.
+          <!-- <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a> -->
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

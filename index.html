@@ -45,7 +45,16 @@
   <div id="container">
     <div id="particles-js"></div>
     <div class="left-col">
-    <div class="overlay"></div>
+    <!--
+ * @Author: 肖俊男
+ * @Date: 2021-09-09 21:57:51
+ * @LastEditTime: 2022-05-06 08:53:40
+ * @LastEditors: 肖俊男
+ * @Description: 
+ * @FilePath: \blog\themes\jelly\layout\_partial\left-col.ejs
+ * 鲸落
+-->
+<div class="overlay"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -68,13 +77,13 @@
 						
 							<li><a href="/">首页</a></li>
 				        
-							<li><a href="/archives">档案</a></li>
+							<li><a href="/archives">标签</a></li>
 				        
 						</ul>
 					</nav>
 					<nav class="half-header-menu">
 						<a class="hide">Home</a>
-						<a>标签</a>
+						<!-- <a>标签</a> -->
 						<a>友情链接</a>
 						<a>关于我</a>
 					</nav>
@@ -152,7 +161,7 @@
 				
 					<li><a href="/">首页</a></li>
 		        
-					<li><a href="/archives">档案</a></li>
+					<li><a href="/archives">标签</a></li>
 		        
 		        <div class="clearfix"></div>
 				</ul>
@@ -173,11 +182,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-算法设计与分析" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-算法设计与分析-贪心法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/05/05/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/" class="article-date">
-  	<time datetime="2022-05-05T10:48:45.871Z" itemprop="datePublished">2022-05-05</time>
+      <a href="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E8%B4%AA%E5%BF%83%E6%B3%95/" class="article-date">
+  	<time datetime="2022-05-06T02:11:13.184Z" itemprop="datePublished">2022-05-06</time>
 </a>
     </div>
   
@@ -190,8 +199,8 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/05/05/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/">
-        鲸落 - 算法设计与分析
+      <a class="article-title" href="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E8%B4%AA%E5%BF%83%E6%B3%95/">
+        鲸落 - 算法设计与分析之贪心法
         
       </a>
     </h1>
@@ -202,8 +211,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>欢迎来到我的博客。本部分主要是记录我学习算法设计与分析的笔记以及在学习过程中遇到的一些问题。</p>
-<h1 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h1>
+        <p>欢迎来到我的博客。本部分主要是记录我学习算法设计与分析贪心法的笔记以及在学习过程中遇到的一些问题。</p>
+<h2 id="1、解题步骤"><a href="#1、解题步骤" class="headerlink" title="1、解题步骤"></a>1、解题步骤</h2><ul>
+<li>提出贪心策略（观察问题特征，构造贪心选择）</li>
+<li>证明策略正确（假设最优方案，通过替换证明）</li>
+</ul>
+<h2 id="2、部分背包问题"><a href="#2、部分背包问题" class="headerlink" title="2、部分背包问题"></a>2、部分背包问题</h2><p>与0-1背包问题不同的是，部分背包问题可以取一个物品的部分，如去水的一半，二0-1背包问题是商品要么拿，要不不拿</p>
+<ul>
+<li><p><img src="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E8%B4%AA%E5%BF%83%E6%B3%95/1.png" alt="1"></p>
+</li>
+<li><p><img src="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E8%B4%AA%E5%BF%83%E6%B3%95/2.png" alt="2"></p>
+</li>
+</ul>
       
     </div>
     
@@ -212,15 +231,15 @@
       
       
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/">算法设计与分析</a>
+	<a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/">算法设计与分析</a><a class="article-category-link" href="/categories/%E8%B4%AA%E5%BF%83%E6%B3%95/">贪心法</a>
 	</div>
 
 
       
         <!-- 
 <div class="counter-tag counter">
-    <span id="/2022/05/05/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="鲸落 - 算法设计与分析">
+    <span id="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E8%B4%AA%E5%BF%83%E6%B3%95/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="鲸落 - 算法设计与分析之贪心法">
          &nbsp;
         view
     </span>
@@ -229,6 +248,189 @@
       
       <div class="clearfix"></div>
     </div>
+      
+        <p class="article-more-link">
+          <a  href="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E8%B4%AA%E5%BF%83%E6%B3%95/#more">阅读全文 >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-算法设计与分析-动态规划" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="article-date">
+  	<time datetime="2022-05-06T00:56:46.269Z" itemprop="datePublished">2022-05-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+        鲸落 - 算法设计与分析之动态规划
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>欢迎来到我的博客。<br>动态规划(避免重复节点的计算)：计算的过程从小问题到大问题，并将计算的结果储存在一张表上。此方法的优点是，一旦一个子问题被解决，就储存器结果，此后遇到同样的子问题，就不在重复的计算。<br>本部分主要是记录我学习算法设计与分析动态规划的笔记以及在学习过程中遇到的一些问题。</p>
+<h2 id="1、解题步骤"><a href="#1、解题步骤" class="headerlink" title="1、解题步骤"></a>1、解题步骤</h2><ul>
+<li><strong>动态规划组成部分一：确定状态</strong><ul>
+<li><strong>最后一步</strong></li>
+<li><strong>子问题</strong></li>
+</ul>
+</li>
+<li><strong>动态规划组成部分二：转移方程</strong></li>
+<li><strong>动态规划组成部分三：初始条件和边界情况</strong></li>
+<li><strong>动态规划组成部分四：计算顺序</strong></li>
+</ul>
+<h2 id="2、面值2元，5元，7元，最少硬币组成27元"><a href="#2、面值2元，5元，7元，最少硬币组成27元" class="headerlink" title="2、面值2元，5元，7元，最少硬币组成27元"></a>2、面值2元，5元，7元，最少硬币组成27元</h2><ul>
+<li><em>动态规划组成部分一：确定状态</em>*<ul>
+<li>简单的说，解动态规划的时候需要开一个数组，数组的每个元素f[i]或者f[i] [j]代表什么，类似于解数学题中，x，Y，Z代表什么<ul>
+<li>确定状态需要两个步骤：最后一步和子问题</li>
+<li><strong>最后一步</strong>：<ul>
+<li>虽然我们不知道最优策略是什么,但是最优策略肯定是K枚硬币 a_1 、 a_2 .. a_k 加起来是27,所以一定有一枚最后的硬币： a_k 。除掉这枚硬币，前面的硬币面值加起来是27- a_k ,</li>
+<li>关键点1：我们不关心前面的K-1枚硬币是怎么拼出27- a_k  的（可能有1种拼法，可能有100种拼法)，而且我们现在甚至还不知道 a_k  和K，但是我们确定前面的硬币拼出了27-  a_k  </li>
+<li>关键点2：因为是最优策略，所以拼出27- a_k   的硬币数一定要最少，否则这就不是最优策略了</li>
+<li>这是会有一个问题：与递归的区别：递归做了很多重复计算，避免方法则使用动态规划</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a><a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/">算法设计与分析</a>
+	</div>
+
+
+      
+        <!-- 
+<div class="counter-tag counter">
+    <span id="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="鲸落 - 算法设计与分析之动态规划">
+         &nbsp;
+        view
+    </span>
+</div>
+ -->
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/#more">阅读全文 >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-算法设计与分析-分治法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%88%86%E6%B2%BB%E6%B3%95/" class="article-date">
+  	<time datetime="2022-05-06T00:49:02.727Z" itemprop="datePublished">2022-05-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%88%86%E6%B2%BB%E6%B3%95/">
+        鲸落 - 算法设计与分析之分治法
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>欢迎来到我的博客。本部分主要是记录我学习算法设计与分析分治法的笔记以及在学习过程中遇到的一些问题。</p>
+<h2 id="1、解题步骤"><a href="#1、解题步骤" class="headerlink" title="1、解题步骤"></a>1、解题步骤</h2><ul>
+<li>分</li>
+<li>治</li>
+<li>合</li>
+</ul>
+<h2 id="2、大整数相乘"><a href="#2、大整数相乘" class="headerlink" title="2、大整数相乘"></a>2、大整数相乘</h2><p>设X和Y都是n位的二进制整数（简单起见，设n为2的幂次，且均为正整数），现在要计算它们的乘积X<em>Y。当n非常大的时候，请应用分治法实现X</em>Y的求解。并尽可能的降低该算法的时间复杂度。<br><img src="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%88%86%E6%B2%BB%E6%B3%95/1.png" alt="分治法1"><br><img src="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%88%86%E6%B2%BB%E6%B3%95/2.png" alt="分治法2"></p>
+<ul>
+<li>将x*y的乘积进行优化：</li>
+</ul>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E5%88%86%E6%B2%BB%E6%B3%95/">分治法</a><a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/">算法设计与分析</a>
+	</div>
+
+
+      
+        <!-- 
+<div class="counter-tag counter">
+    <span id="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%88%86%E6%B2%BB%E6%B3%95/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="鲸落 - 算法设计与分析之分治法">
+         &nbsp;
+        view
+    </span>
+</div>
+ -->
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2022/05/06/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E5%88%86%E6%B2%BB%E6%B3%95/#more">阅读全文 >></a>
+        </p>
       
     
   </div>
